@@ -119,7 +119,7 @@ public class OI {
 
         // SmartDashboard Buttons
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
-        SmartDashboard.putData("CustomDrive", new CustomDrive());
+        SmartDashboard.putData("CustomDrive", new CustomDrive(joystick1));
         SmartDashboard.putData("PowerCubeLift_Scale", new PowerCubeLift_Scale());
         SmartDashboard.putData("PowerCubeLift_Switch", new PowerCubeLift_Switch());
         SmartDashboard.putData("PowerCubeLift_Bottom", new PowerCubeLift_Bottom());
