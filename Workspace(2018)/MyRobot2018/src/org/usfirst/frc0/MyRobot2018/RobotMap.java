@@ -61,7 +61,7 @@ public class RobotMap {
         driveDifferentialDrive1.setMaxOutput(1.0);
 
         powerCubeLiftTalonSRX1 = new WPI_TalonSRX(0);
-        
+        powerCubeLiftTalonSRX1.configSelectedFeedbackSensor(com.ctre.phoenix.motorcontrol.FeedbackDevice.QuadEncoder, 0, 0);
         
         powerCubeIntakeSpeedController1 = new Spark(2);
         LiveWindow.addActuator("PowerCubeIntake", "Speed Controller 1", (Spark) powerCubeIntakeSpeedController1);

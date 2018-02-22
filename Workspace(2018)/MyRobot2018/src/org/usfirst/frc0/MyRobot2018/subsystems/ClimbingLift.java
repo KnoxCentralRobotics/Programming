@@ -45,7 +45,22 @@ public class ClimbingLift extends Subsystem {
         // Set the default command for a subsystem here.
         // setDefaultCommand(new MySpecialCommand());
     }
-
+    
+    public void lift_up()
+    {
+    	speedController1.set(1.0);
+    }
+    
+    public void lift_down()
+    {
+    	speedController1.set(-1.0);
+    }
+    
+    public void lift_stop()
+    {
+    	speedController1.set(0.0);
+    }
+    
     @Override
     public void periodic() {
         // Put code here to be run every loop

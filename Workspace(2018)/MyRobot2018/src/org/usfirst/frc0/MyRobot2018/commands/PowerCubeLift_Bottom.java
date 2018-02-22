@@ -42,6 +42,7 @@ public class PowerCubeLift_Bottom extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
+    	Robot.powerCubeLift.lift_bottom();
     }
 
     // Make this return true when this Command no longer needs to run execute()
