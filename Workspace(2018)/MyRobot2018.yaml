@@ -103,7 +103,7 @@ Children:
           default: '2'
           name: CAN ID
           validators: [CANID]
-          value: '0'
+          value: '2'
       Base: Talon SRX
       Name: Talon SRX 1
     Properties:
@@ -137,7 +137,7 @@ Children:
           default: '0'
           name: Output Channel (PWM)
           validators: *id003
-          value: '2'
+          value: '4'
         Inverted: !!robotbuilder.data.properties.BooleanProperty {default: false,
           name: Inverted, validators: null, value: false}
       Base: Speed Controller
@@ -155,7 +155,7 @@ Children:
           default: '0'
           name: Output Channel (PWM)
           validators: *id003
-          value: '3'
+          value: '5'
         Inverted: !!robotbuilder.data.properties.BooleanProperty {default: false,
           name: Inverted, validators: null, value: true}
       Base: Speed Controller
@@ -213,7 +213,7 @@ Children:
           default: '0'
           name: Output Channel (PWM)
           validators: *id003
-          value: '4'
+          value: '3'
         Inverted: !!robotbuilder.data.properties.BooleanProperty {default: false,
           name: Inverted, validators: null, value: false}
       Base: Speed Controller
@@ -270,7 +270,7 @@ Children:
           validators: null
           value: whileHeld
       Base: Joystick Button
-      Name: PowerCubeLift_Up1
+      Name: PowerCubeLift_Up5
     - Children: []
       Properties:
         Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
@@ -299,7 +299,7 @@ Children:
           validators: null
           value: whenReleased
       Base: Joystick Button
-      Name: PowerCubeLift_Stop1
+      Name: PowerCubeLift_Stop5
     - Children: []
       Properties:
         Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
@@ -372,7 +372,7 @@ Children:
           default: '1'
           name: Button
           validators: null
-          value: '6'
+          value: '7'
         Command: !!robotbuilder.data.properties.TypeSelectionProperty
           default: None
           name: Command
@@ -386,36 +386,7 @@ Children:
           validators: null
           value: whenPressed
       Base: Joystick Button
-      Name: PowerCubeLift_Scale6
-    - Children: []
-      Properties:
-        Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
-          name: Joystick, validators: null, value: Joystick 1}
-        Parameters: !!robotbuilder.data.properties.ParametersProperty
-          default: []
-          name: Parameters
-          validators: null
-          value: []
-        Button: !!robotbuilder.data.properties.ChoicesProperty
-          choices: *id008
-          default: '1'
-          name: Button
-          validators: null
-          value: '7'
-        Command: !!robotbuilder.data.properties.TypeSelectionProperty
-          default: None
-          name: Command
-          type: Command
-          validators: *id009
-          value: PowerCubeLift_Switch
-        When to Run: !!robotbuilder.data.properties.ChoicesProperty
-          choices: *id010
-          default: whileHeld
-          name: When to Run
-          validators: null
-          value: whenPressed
-      Base: Joystick Button
-      Name: PowerCubeLift_Switch7
+      Name: PowerCubeLift_Scale7
     - Children: []
       Properties:
         Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
@@ -436,7 +407,7 @@ Children:
           name: Command
           type: Command
           validators: *id009
-          value: PowerCubeLift_Bottom
+          value: PowerCubeLift_Switch
         When to Run: !!robotbuilder.data.properties.ChoicesProperty
           choices: *id010
           default: whileHeld
@@ -444,7 +415,7 @@ Children:
           validators: null
           value: whenPressed
       Base: Joystick Button
-      Name: PowerCubeLift_Bottom8
+      Name: PowerCubeLift_Switch8
     - Children: []
       Properties:
         Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
@@ -460,6 +431,35 @@ Children:
           name: Button
           validators: null
           value: '9'
+        Command: !!robotbuilder.data.properties.TypeSelectionProperty
+          default: None
+          name: Command
+          type: Command
+          validators: *id009
+          value: PowerCubeLift_Bottom
+        When to Run: !!robotbuilder.data.properties.ChoicesProperty
+          choices: *id010
+          default: whileHeld
+          name: When to Run
+          validators: null
+          value: whenPressed
+      Base: Joystick Button
+      Name: PowerCubeLift_Bottom9
+    - Children: []
+      Properties:
+        Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
+          name: Joystick, validators: null, value: Joystick 1}
+        Parameters: !!robotbuilder.data.properties.ParametersProperty
+          default: []
+          name: Parameters
+          validators: null
+          value: []
+        Button: !!robotbuilder.data.properties.ChoicesProperty
+          choices: *id008
+          default: '1'
+          name: Button
+          validators: null
+          value: '4'
         Command: !!robotbuilder.data.properties.TypeSelectionProperty
           default: None
           name: Command
@@ -473,7 +473,7 @@ Children:
           validators: null
           value: whileHeld
       Base: Joystick Button
-      Name: ClimbingLift_Down9
+      Name: ClimbingLift_Down4
     - Children: []
       Properties:
         Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
@@ -488,7 +488,7 @@ Children:
           default: '1'
           name: Button
           validators: null
-          value: '9'
+          value: '4'
         Command: !!robotbuilder.data.properties.TypeSelectionProperty
           default: None
           name: Command
@@ -502,7 +502,7 @@ Children:
           validators: null
           value: whenReleased
       Base: Joystick Button
-      Name: ClimbingLift_Stop9
+      Name: ClimbingLift_Stop4
     - Children: []
       Properties:
         Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
@@ -517,7 +517,7 @@ Children:
           default: '1'
           name: Button
           validators: null
-          value: '1'
+          value: '6'
         Command: !!robotbuilder.data.properties.TypeSelectionProperty
           default: None
           name: Command
@@ -531,7 +531,36 @@ Children:
           validators: null
           value: whileHeld
       Base: Joystick Button
-      Name: ClimbingLift_Up10
+      Name: ClimbingLift_Up6
+    - Children: []
+      Properties:
+        Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
+          name: Joystick, validators: null, value: Joystick 1}
+        Parameters: !!robotbuilder.data.properties.ParametersProperty
+          default: []
+          name: Parameters
+          validators: null
+          value: []
+        Button: !!robotbuilder.data.properties.ChoicesProperty
+          choices: *id008
+          default: '1'
+          name: Button
+          validators: null
+          value: '6'
+        Command: !!robotbuilder.data.properties.TypeSelectionProperty
+          default: None
+          name: Command
+          type: Command
+          validators: *id009
+          value: ClimbingLift_Stop
+        When to Run: !!robotbuilder.data.properties.ChoicesProperty
+          choices: *id010
+          default: whileHeld
+          name: When to Run
+          validators: null
+          value: whenReleased
+      Base: Joystick Button
+      Name: ClimbingLift_Stop6
     - Children: []
       Properties:
         Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
@@ -547,35 +576,6 @@ Children:
           name: Button
           validators: null
           value: '10'
-        Command: !!robotbuilder.data.properties.TypeSelectionProperty
-          default: None
-          name: Command
-          type: Command
-          validators: *id009
-          value: ClimbingLift_Stop
-        When to Run: !!robotbuilder.data.properties.ChoicesProperty
-          choices: *id010
-          default: whileHeld
-          name: When to Run
-          validators: null
-          value: whenReleased
-      Base: Joystick Button
-      Name: ClimbingLift_Stop10
-    - Children: []
-      Properties:
-        Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
-          name: Joystick, validators: null, value: Joystick 1}
-        Parameters: !!robotbuilder.data.properties.ParametersProperty
-          default: []
-          name: Parameters
-          validators: null
-          value: []
-        Button: !!robotbuilder.data.properties.ChoicesProperty
-          choices: *id008
-          default: '1'
-          name: Button
-          validators: null
-          value: '11'
         Command: !!robotbuilder.data.properties.TypeSelectionProperty
           default: None
           name: Command
@@ -604,7 +604,7 @@ Children:
           default: '1'
           name: Button
           validators: null
-          value: '12'
+          value: '11'
         Command: !!robotbuilder.data.properties.TypeSelectionProperty
           default: None
           name: Command
@@ -633,7 +633,7 @@ Children:
           default: '1'
           name: Button
           validators: null
-          value: '1'
+          value: '12'
         Command: !!robotbuilder.data.properties.TypeSelectionProperty
           default: None
           name: Command
@@ -662,7 +662,7 @@ Children:
           default: '1'
           name: Button
           validators: null
-          value: '14'
+          value: '1'
         Command: !!robotbuilder.data.properties.TypeSelectionProperty
           default: None
           name: Command
@@ -676,7 +676,7 @@ Children:
           validators: null
           value: whileHeld
       Base: Joystick Button
-      Name: PowerCubeIntake_In14
+      Name: PowerCubeIntake_In1
     - Children: []
       Properties:
         Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
@@ -691,7 +691,7 @@ Children:
           default: '1'
           name: Button
           validators: null
-          value: '14'
+          value: '1'
         Command: !!robotbuilder.data.properties.TypeSelectionProperty
           default: None
           name: Command
@@ -705,7 +705,7 @@ Children:
           validators: null
           value: whenReleased
       Base: Joystick Button
-      Name: PowerCubeIntake_Stop14
+      Name: PowerCubeIntake_Stop1
     - Children: []
       Properties:
         Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
@@ -720,7 +720,7 @@ Children:
           default: '1'
           name: Button
           validators: null
-          value: '15'
+          value: '2'
         Command: !!robotbuilder.data.properties.TypeSelectionProperty
           default: None
           name: Command
@@ -734,7 +734,7 @@ Children:
           validators: null
           value: whileHeld
       Base: Joystick Button
-      Name: PowerCubeIntake_Out15
+      Name: PowerCubeIntake_Out2
     - Children: []
       Properties:
         Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
@@ -749,7 +749,7 @@ Children:
           default: '1'
           name: Button
           validators: null
-          value: '15'
+          value: '2'
         Command: !!robotbuilder.data.properties.TypeSelectionProperty
           default: None
           name: Command
@@ -763,7 +763,7 @@ Children:
           validators: null
           value: whenReleased
       Base: Joystick Button
-      Name: PowerCubeIntake_Stop15
+      Name: PowerCubeIntake_Stop2
     Properties:
       Number: !!robotbuilder.data.properties.ChoicesProperty
         choices: ['0', '1', '2', '3', '4', '5']
@@ -1155,8 +1155,8 @@ Children:
   Base: Commands
   Name: Commands
 Properties:
-  Eclipse Workspace: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\Link_\workspace',
-    extension: null, folder: true, name: Eclipse Workspace, validators: null, value: 'C:\Users\Link_\Documents\GitHub\Programming\Workspace(2018)'}
+  Eclipse Workspace: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\Centr\workspace',
+    extension: null, folder: true, name: Eclipse Workspace, validators: null, value: 'C:\Users\Centr\OneDrive\Documents\GitHub\Programming\Workspace(2018)'}
   Export Commands: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Export Commands, validators: null, value: true}
   Autonomous command parameters: !!robotbuilder.data.properties.ParametersProperty
@@ -1174,7 +1174,7 @@ Properties:
     name: Export Subsystems, validators: null, value: true}
   Simulation World File: !!robotbuilder.data.properties.StringProperty {default: /usr/share/frcsim/worlds/GearsBotDemo.world,
     name: Simulation World File, validators: null, value: /usr/share/frcsim/worlds/GearsBotDemo.world}
-  Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\Link_\',
+  Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\Centr\',
     extension: null, folder: true, name: Wiring file location, validators: null, value: 'C:\Users\Link_\'}
   Autonomous Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
     name: Autonomous Command, type: Command, validators: null, value: Autonomous Command}

@@ -62,7 +62,9 @@ public class PowerCubeLift extends Subsystem {
     
     public void lift_scale()
     {
-    	talonSRX1.setSelectedSensorPosition(1, 1, 5000);
+    	System.out.print(talonSRX1.getSelectedSensorPosition(0));
+    	System.out.print(talonSRX1.getSelectedSensorPosition(1));
+    	talonSRX1.setSelectedSensorPosition(5000, 1, 5000);
     }
     
     public void lift_switch()
