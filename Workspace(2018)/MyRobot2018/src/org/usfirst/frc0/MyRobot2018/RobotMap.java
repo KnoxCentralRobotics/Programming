@@ -48,10 +48,10 @@ public class RobotMap {
         driveAnalogGyro1 = new AnalogGyro(0);
         LiveWindow.addSensor("Drive", "AnalogGyro 1", driveAnalogGyro1);
         driveAnalogGyro1.setSensitivity(0.007);
-        driveSpeedController1 = new Spark(1);
+        driveSpeedController1 = new Spark(0);
         LiveWindow.addActuator("Drive", "Speed Controller 1", (Spark) driveSpeedController1);
         driveSpeedController1.setInverted(false);
-        driveSpeedController2 = new Spark(2);
+        driveSpeedController2 = new Spark(1);
         LiveWindow.addActuator("Drive", "Speed Controller 2", (Spark) driveSpeedController2);
         driveSpeedController2.setInverted(true);
         driveDifferentialDrive1 = new DifferentialDrive(driveSpeedController1, driveSpeedController2);

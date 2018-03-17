@@ -53,13 +53,13 @@ public class PowerCubeIntake extends Subsystem {
     public void In()
     {
     	speedController1.set(1.0);
-    	speedController2.set(1.0);
+    	speedController2.set(-1.0);
     }
     
     public void Out()
     {
     	speedController1.set(-1.0);
-    	speedController2.set(-1.0);
+    	speedController2.set(1.0);
     }
     
     public void Off()

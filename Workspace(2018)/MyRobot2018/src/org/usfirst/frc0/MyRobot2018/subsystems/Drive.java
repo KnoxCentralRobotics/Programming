@@ -63,6 +63,18 @@ public class Drive extends Subsystem {
         // Put code here to be run every loop
 
     }
+    
+    public void autoDriveOne(){
+    	
+    	double t=0;
+    	do{
+    		RobotMap.driveDifferentialDrive1.tankDrive(-0.8, 0.8);
+    		
+    		t++;
+    	}
+    	while(t<95000);
+    		RobotMap.driveDifferentialDrive1.tankDrive(0.0,0.0);	
+    }
 
     // Put methods for controlling this subsystem
     // here. Call these from Commands.

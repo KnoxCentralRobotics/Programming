@@ -48,7 +48,7 @@ public class ClimbingLift extends Subsystem {
     
     public void lift_up()
     {
-    	speedController1.set(1.0);
+    	speedController1.set(10.0);
     }
     
     public void lift_down()
