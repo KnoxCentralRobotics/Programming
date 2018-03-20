@@ -52,12 +52,17 @@ public class PowerCubeLift extends Subsystem {
     
     public void lift_down()
     {
-    	talonSRX1.set(-0.8);
+    	talonSRX1.set(-0.4);
     }
     
     public void lift_stop()
     {
     	talonSRX1.set(0.0);
+    }
+    
+    public void lift_stop2()
+    {
+    	talonSRX1.set(0.1);
     }
     
     public void lift_scale()
